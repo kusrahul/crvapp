@@ -68,7 +68,7 @@ export class LocationPage {
   public optionsFn(): void { //here item is an object 
     let placevalue = this.place;
     console.log(placevalue);
-    let your_json_object = { "name":"birja", "age":30, "car":null };
+    let your_json_object = { "name":"birja", "age":30, "car":null, "address": "abs street" };
 
     // set a key/value
     this.storage.set('my-json', your_json_object);
