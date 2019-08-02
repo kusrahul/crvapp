@@ -1,0 +1,55 @@
+page-home {
+
+}
+.card-ios {
+    margin: 1px;
+    width: calc(100% - 0px);
+    }
+.ion-card img {
+        width: 74% !important;
+        margin: 1px auto !important;
+        }
+.buttons-ios-secondary{
+    background-color:rgba(32, 140, 64, 0.9);
+    font-weight: 900 !important;
+    font-size: 12px !important;
+    width: 95%;
+    margin: 3px;
+   // position: absolute;
+    //bottom: 0;
+}
+.fix_img{
+    width: 100PX;
+    height: 80px;
+    margin: 5px auto !important
+}
+.content-ios {
+    background-color: #f3f3f3 !important;
+    }
+.card-content-ios{
+    min-height: 82px;
+    padding: 0px 16px 2px;
+}
+.sme_height{
+    display: flex;
+}
+.card-title-ios{
+    font-size: 11px;
+    font-weight: 200 !important;
+    text-transform: uppercase !important;
+}
+.slides{
+    height: auto;
+    .swiper-slide{
+    }
+    .swiper-pagination-bullet-active{
+        background:color($colors, secondary);
+    }
+}
+.slides{
+    height: 154px;
+    width: 300px;
+}
+.scroll-content {
+    padding: 0PX !important;
+    }

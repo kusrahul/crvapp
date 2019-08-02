@@ -1,0 +1,52 @@
+page-checkout {
+    
+    .bg_color_check{
+        background-color: #e5e5e5;
+    }
+
+    .grid_border_check{
+        border: 1px solid #e0e0d1;
+    }
+
+    .bg_color_check h4{
+        padding: 2px;
+        margin: 0px;
+        color: #5c5c5c;
+        text-transform: capitalize;
+        font-size: 18px;
+    }
+    .prod_check {
+        font-size: 12px;
+    }
+    .cor_bl{
+        color: #00bcd4;
+        cursor: pointer;
+    }
+    .bg_color_sky {
+background-color: #00bcd4;
+    }
+    .padding_15{
+        padding: 15px;
+    }
+    .tx_cntr{
+        text-align: center;
+    }
+    .wh_tx{
+        color: #fff;
+    }
+    .liability_box{
+        max-height: 150px;
+        display: block;
+        overflow: auto;
+        border: solid 1px #ccc;
+    }
+    .place_order_btn{
+        text-align: center;
+    }
+    .txt_change_width{
+        font-weight: bold;
+    }
+    .grid_border_one{
+        margin-top: 25px;
+    }
+}

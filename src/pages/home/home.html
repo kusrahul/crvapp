@@ -1,0 +1,201 @@
+<ion-header>
+    <ion-navbar>
+       <ion-buttons left>
+        <button ion-button menuToggle>
+          <ion-icon name="menu" ></ion-icon>
+        </button>
+       </ion-buttons>
+       <img src="assets/logo_header.png" alt="logo">
+      <!--<ion-buttons right >
+       <button (click)="openModal()"  icon-only>
+       </button>
+       <ion-buttons end>
+          <button ion-button icon-only (click)="openSearch()">
+            <ion-icon name="search"></ion-icon>
+          </button>
+          <button ion-button icon-only class="cart-button" (click)="openCart()">
+            <ion-icon name="cart">
+              <ion-badge color="secondary"></ion-badge>
+            </ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-buttons>-->
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content >
+      <!--Banner code start-->
+      <ion-slides  autoplay="2000" loop="true" speed="500" class="bannerstyle" class="slides"pager>
+            <ion-slide>
+                <img src="assets/banner/Costa-Rica-Vacationing-Villas.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img src="assets/banner/hotel1.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img src="assets/banner/turtle_water_ocean_sea_underwater.jpg">
+            </ion-slide>
+          </ion-slides>
+
+           <!--Banner code ens-->
+
+  <ion-grid>
+      <ion-row>
+          <ion-col col-6 class="sme_height">
+  <ion-card class="animated fadeIn">
+      <div class="card-thumb">
+         
+        <img class="image fix_img"  src="assets/products/1.jpg" />
+      </div>
+      <ion-card-content>
+        <ion-card-title>
+          <div class="line-clamp card-title-ios">HOTELS</div>
+        </ion-card-title>
+        <ion-row class="card-attr">
+          <!--<ion-col col-8>
+            <h4 class="card-price-normal">$422</h4>
+          </ion-col>-->
+           
+        </ion-row>
+      </ion-card-content>
+      <ion-buttons>
+        <span>
+          <button ion-button block color="secondary" class="buttons-ios-secondary" (click)="openProduct()">
+            SEE LISTINGS</button>
+        </span>
+      </ion-buttons>
+    </ion-card>
+    </ion-col>
+   
+    <ion-col col-6 class="sme_height">
+      <ion-card class="animated fadeIn">
+          <div class="card-thumb">
+             
+            <img class="image fix_img" src="assets/products/2.jpg" />
+          </div>
+          <ion-card-content>
+            <ion-card-title>
+              <div class="line-clamp card-title-ios">PORTFOLIO VILLAS</div>
+            </ion-card-title>
+            <ion-row class="card-attr">
+              <!--<ion-col col-8>
+                <h4 class="card-price-normal">$422</h4>
+              </ion-col>-->
+              
+            </ion-row>
+          </ion-card-content>
+          <ion-buttons>
+            <span>
+              <button ion-button block color="secondary" class="buttons-ios-secondary" (click)="openProduct()">
+                SEE LISTINGS</button>
+            </span>
+          </ion-buttons>
+        </ion-card>
+        </ion-col>
+
+        <ion-col col-6 class="sme_height"> 
+          <ion-card class="animated fadeIn">
+              <div class="card-thumb">
+                 
+                <img class="image fix_img" src="assets/products/3.jpg" />
+              </div>
+              <ion-card-content>
+                <ion-card-title>
+                  <div class="line-clamp card-title-ios">TOURS OF ARENAL VILLAS</div>
+                </ion-card-title>
+                <ion-row class="card-attr">
+                  <!--<ion-col col-8>
+                    <h4 class="card-price-normal">$422</h4>
+                  </ion-col>-->
+                  
+                </ion-row>
+              </ion-card-content>
+              <ion-buttons>
+                <span>
+                  <button ion-button block color="secondary" class="buttons-ios-secondary" (click)="openProduct()">
+                    SEE LISTINGS</button>
+                </span>
+              </ion-buttons>
+            </ion-card>
+            </ion-col>
+
+            <ion-col col-6 class="sme_height">
+              <ion-card class="animated fadeIn">
+                  <div class="card-thumb">
+                     
+                    <img class="image fix_img" src="assets/products/4.jpg" />
+                  </div>
+                  <ion-card-content>
+                    <ion-card-title>
+                      <div class="line-clamp card-title-ios">TOURS OF GUANACASTE</div>
+                    </ion-card-title>
+                    <ion-row class="card-attr">
+                      <!--<ion-col col-8>
+                        <h4 class="card-price-normal">$422</h4>
+                      </ion-col>-->
+                      
+                    </ion-row>
+                  </ion-card-content>
+                  <ion-buttons>
+                    <span>
+                      <button ion-button block color="secondary" class="buttons-ios-secondary" (click)="openProduct()">
+                        SEE LISTINGS</button>
+                    </span>
+                  </ion-buttons>
+                </ion-card>
+                </ion-col>
+
+                <ion-col col-6 class="sme_height">
+                  <ion-card class="animated fadeIn">
+                      <div class="card-thumb">
+                         
+                        <img class="image fix_img" src="assets/products/5.jpg" />
+                      </div>
+                      <ion-card-content>
+                        <ion-card-title>
+                          <div class="line-clamp card-title-ios">TOURS OF JACO</div>
+                        </ion-card-title>
+                        <ion-row class="card-attr">
+                          <!--<ion-col col-8>
+                            <h4 class="card-price-normal">$422</h4>
+                          </ion-col>-->
+                          
+                        </ion-row>
+                      </ion-card-content>
+                      <ion-buttons>
+                        <span>
+                          <button ion-button block color="secondary" class="buttons-ios-secondary" (click)="openProduct()">
+                            SEE LISTINGS</button>
+                        </span>
+                      </ion-buttons>
+                    </ion-card>
+                    </ion-col>
+
+                    <ion-col col-6 class="sme_height">
+                      <ion-card class="animated fadeIn">
+                          <div class="card-thumb">
+                             
+                            <img class="image fix_img" src="assets/products/6.jpg" />
+                          </div>
+                          <ion-card-content>
+                            <ion-card-title>
+                              <div class="line-clamp card-title-ios">TOURS MANUEL ANTONIO</div>
+                            </ion-card-title>
+                            <ion-row class="card-attr">
+                              <!--<ion-col col-8>
+                                <h4 class="card-price-normal">$422</h4>
+                              </ion-col>-->
+                              
+                            </ion-row>
+                          </ion-card-content>
+                          <ion-buttons>
+                            <span>
+                              <button ion-button block color="secondary" class="buttons-ios-secondary" (click)="openProduct()">
+                                SEE LISTINGS</button>
+                            </span>
+                          </ion-buttons>
+                        </ion-card>
+                        </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-content>

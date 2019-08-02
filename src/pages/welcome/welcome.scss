@@ -1,0 +1,41 @@
+.wel_page {
+    zposition: relative;
+    background-image: url('../../assets/imgs/wel2.png');
+    background-size:cover;
+    background-position: top;
+}
+
+.wel_cont{
+		position: absolute;
+    top: 0%;
+    width: 100%;
+    text-align: center;
+	background:inherit;
+    padding-top: 145px;
+    
+    bottom: 0;}
+
+
+.tour {
+    color: #fff;
+    text-decoration: underline;
+    background: #00bcd4;
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 165px;
+    width: 26%;
+    min-width: 120px;
+}
+    .pkg {
+    color: #fff;
+    text-decoration: underline;
+    background: #ff6600;
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    width: 26%;
+    min-width: 120px;
+}
