@@ -15,8 +15,32 @@
 </ion-header>
 
 <ion-content padding>
-    <div *ngFor="let data of val">
-          <p>{{data.title}}</p>
-          <p *ngIf=" data.image != ''"><img src="assets/products/{{data.image}}" /></p>
-      </div>
+  <ion-grid>
+    <ion-row>
+        <ion-col col-12 class="sme_height" *ngFor="let data of val">
+<ion-card class="animated fadeIn">
+    <div class="card-thumb">
+       
+      <img class="image"  src="assets/products/{{data.image}}" />
+    </div>
+    <ion-card-content>
+      <ion-card-title>
+        <div class="line-clamp card-title-ios text-algn_center"><h3>{{data.title}}</h3></div>
+      </ion-card-title>
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button block color="secondary" class="buttons-ios-secondary btn_color" (click)="showMsg()">
+            Book Now</button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button block color="secondary" class="buttons-ios-secondary btn_color" (click)="showAlert()">
+            Details</button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  </ion-col>
+  </ion-row>
+  
+  </ion-grid>      
 </ion-content>

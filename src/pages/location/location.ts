@@ -28,23 +28,17 @@ export class LocationPage {
   x = {
   "Arenal": 
   [{
-		"title": "Ar1"
-   }, 
-   {
-		"image": "arenal_one.jpg"
+		"title": "Ar1",
+    "image": "arenal_one.jpg"
 	}],
   "Guanacaste": 
   [{
-		"title": "Guan2"
-   },
-   {
+		"title": "Guan2",
 		"image": "Lorem ipsum2"
 	}],
   "Jaco": 
   [{
-		"title": "Ja3"
-   },
-   {
+		"title": "Ja3",
 		"image": "Lorem ipsum3"
 	}]
 }
@@ -72,30 +66,22 @@ export class LocationPage {
     let x = {
       "Arenal": 
       [{
-        "title": "Ar1"
-       }, 
-       {
+        "title": "Ar1",
         "image": "arenal_one.jpg"
       }],
       "Guanacaste": 
       [{
-        "title": "Guan2"
-       },
-       {
+        "title": "Guan2",
         "image": "Lorem ipsum2"
       }],
       "Jaco": 
       [{
-        "title": "Ja3"
-       },
-       {
+        "title": "Ja3",
         "description": "Lorem ipsum3"
       }],
       "Manuel Antonio":
       [{
-        "title": "Man4"
-      },
-      {
+        "title": "Man4",
         "image": "Lorem ipsum4"
       }
       ]
