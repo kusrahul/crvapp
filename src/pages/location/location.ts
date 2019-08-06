@@ -26,25 +26,26 @@ export class LocationPage {
   appointment_types: any;
 
   x = {
-	"Consultation": [{
-		"name": "Joe Smith"
-	}, {
-		"name": "Jane Doe"
+  "Arenal": 
+  [{
+		"title": "Ar1"
+   }, 
+   {
+		"image": "arenal_one.jpg"
 	}],
-	"Re - evaluation": [{
-		"name": "Joe Smith2"
-	}, {
-		"name": "Jane Doe2"
+  "Guanacaste": 
+  [{
+		"title": "Guan2"
+   },
+   {
+		"image": "Lorem ipsum2"
 	}],
-	"Meeting": [{
-		"name": "Joe Smith3"
-	}, {
-		"name": "Jane Doe3"
-	}],
-	"Testing": [{
-		"name": "Joe Smith4"
-	}, {
-		"name": "Jane Doe4"
+  "Jaco": 
+  [{
+		"title": "Ja3"
+   },
+   {
+		"image": "Lorem ipsum3"
 	}]
 }
 
@@ -65,18 +66,41 @@ export class LocationPage {
     this.navCtrl.push(TourlistPage);
   }
 
-  public optionsFn(): void { //here item is an object 
-    let placevalue = this.place;
-    console.log(placevalue);
-    let your_json_object = { "name":"birja", "age":30, "car":null, "address": "abs street" };
-
-    // set a key/value
-    this.storage.set('my-json', your_json_object);
-  
-    // to get a key/value pair
-    this.storage.get('my-json').then((val) => {
-      console.log('Your json is', val);
-    });
-  }
+  public optionsFn(): void { 
+    let locationvalue = this.place;
+    console.log(locationvalue);
+    let x = {
+      "Arenal": 
+      [{
+        "title": "Ar1"
+       }, 
+       {
+        "image": "arenal_one.jpg"
+      }],
+      "Guanacaste": 
+      [{
+        "title": "Guan2"
+       },
+       {
+        "image": "Lorem ipsum2"
+      }],
+      "Jaco": 
+      [{
+        "title": "Ja3"
+       },
+       {
+        "description": "Lorem ipsum3"
+      }],
+      "Manuel Antonio":
+      [{
+        "title": "Man4"
+      },
+      {
+        "image": "Lorem ipsum4"
+      }
+      ]
+    }
+    this.storage.set('my-json', x[locationvalue]);
+   }
 }
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { BooknowPage } from '../booknow/booknow';
-
+import { Storage } from '@ionic/storage';
 /**
  * Generated class for the TourlistPage page.
  *
@@ -14,14 +14,45 @@ import { BooknowPage } from '../booknow/booknow';
   selector: 'page-tourlist',
   templateUrl: 'tourlist.html',
 })
+
+
 export class TourlistPage {
   value: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  val:any;
+  items:any;
+  postList:any;
+  optionsFn:any;
+  displayData: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController,public storage:Storage) {
+  
   }
 
+  
+    persons = [
+    {
+      "name": "Mike",
+      "colors": [
+        {"name": "blue"},
+        {"name": "white"}
+      ]
+    },
+  
+    {
+      "name": "Phoebe",
+      "colors": [
+        {"name": "red"},
+        {"name": "yellow"}
+      ]
+    }
+    ];
+
   ionViewDidLoad() {
+    
     console.log('ionViewDidLoad TourlistPage');
+   this.storage.get('my-json').then((val)=>{
+    this.val = val;
+    console.log(val); 
+    });
   }
 
   showAlert() {
