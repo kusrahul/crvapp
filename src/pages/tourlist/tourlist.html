@@ -16,7 +16,7 @@
 
 <ion-content padding>
     <div *ngFor="let data of val">
-        <p>{{data.title}}</p>
-        <p><img src="assets/products/{{data.image}}" /></p>
-    </div>    
+          <p>{{data.title}}</p>
+          <p *ngIf=" data.image != ''"><img src="assets/products/{{data.image}}" /></p>
+      </div>
 </ion-content>
