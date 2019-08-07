@@ -40,7 +40,12 @@ export class LocationPage {
   [{
 		"title": "Ja3",
 		"image": "Lorem ipsum3"
-	}]
+  }],
+  "Manuel Antonio":
+  [{
+    "title": "Man4",
+    "image": "Lorem ipsum4"
+  }]
 }
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public storage:Storage) {
@@ -83,8 +88,7 @@ export class LocationPage {
       [{
         "title": "Man4",
         "image": "Lorem ipsum4"
-      }
-      ]
+      }]
     }
     this.storage.set('my-json', x[locationvalue]);
    }
