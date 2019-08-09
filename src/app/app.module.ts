@@ -20,6 +20,7 @@ import { TourlistPage } from '../pages/tourlist/tourlist';
 import { CheckoutPage } from '../pages/checkout/checkout';
 import { PackagesPage } from '../pages/packages/packages';
 import { RegisterPage } from '../pages/register/register';
+import { Facebook } from '@ionic-native/facebook/ngx';
 @NgModule({
   declarations: [
     MyApp,
@@ -63,7 +64,8 @@ import { RegisterPage } from '../pages/register/register';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    Facebook
   ]
 })
 export class AppModule {}

@@ -86,3 +86,11 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {
+  font-family: 'Open Sans';
+  src:  url( $font-path + '/open-sans-v17-latin-regular.ttf') format('ttf'), 
+        url( $font-path + '/open-sans-v17-latin-regular.svg') format('svg'),
+        url( $font-path + '/open-sans-v17-latin-regular.woff') format('woff'),
+        url( $font-path + '/open-sans-v17-latin-regular.woff2') format('woff2');
+}

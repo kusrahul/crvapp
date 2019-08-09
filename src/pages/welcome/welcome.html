@@ -12,7 +12,7 @@
 
 
 <ion-header>
-    <ion-navbar>
+    <ion-navbar hideBackButton="true">
        <ion-buttons left>
         <button ion-button menuToggle>
           <ion-icon name="menu" ></ion-icon>
@@ -41,8 +41,8 @@
     <div class="wel_page ">
         
         <div class="wel_cont">
-          <p><a class="tour" href=""> Tours  </a></p>
-          <p><a  class="pkg" href=""> Packages  </a></p>
+          <p><a class="tour" (click)="locationPage()"> Tours  </a></p>
+          <p><a  class="pkg" (click)="packagePage()"> Packages  </a></p>
         </div>
         
         </div>

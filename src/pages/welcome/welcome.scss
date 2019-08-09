@@ -27,6 +27,7 @@
     margin-top: 165px;
     width: 26%;
     min-width: 120px;
+    cursor: pointer;
 }
     .pkg {
     color: #fff;
@@ -38,4 +39,11 @@
     text-decoration: none;
     width: 26%;
     min-width: 120px;
+    cursor: pointer;
 }
+
+.list-ios .item-block .item-inner, .item-ios.item-block .item-inner {
+    border-bottom: inherit;
+}
+
+

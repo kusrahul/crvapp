@@ -35,7 +35,8 @@ page-booknow {
         cursor: pointer;
         position: relative;
         color: #FFF;
-        background: #4A83FD;
+        //background: #4A83FD;
+        background: #ff6600;
     }
     
     .tabs .content {
@@ -87,5 +88,6 @@ page-booknow {
     .button{
         width: 40%;
         height: 34px;
+        background: #ff6600;
     }
 }

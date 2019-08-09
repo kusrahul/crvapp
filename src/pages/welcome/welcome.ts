@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LocationPage } from '../location/location';
+import { PackagesPage } from '../packages/packages';
 
 /**
  * Generated class for the WelcomePage page.
@@ -20,6 +22,15 @@ export class WelcomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
+  }
+  locationPage()
+  {
+    this.navCtrl.push(LocationPage);
+  }
+
+  packagePage()
+  {
+    this.navCtrl.push(PackagesPage);
   }
 
 }

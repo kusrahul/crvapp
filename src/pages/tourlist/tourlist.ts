@@ -55,7 +55,7 @@ export class TourlistPage {
     });
   }
 
-  showAlert() {
+  /*showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Per Person Tour',
       inputs: [{
@@ -65,7 +65,7 @@ export class TourlistPage {
       buttons: ['OK'],
     });
     alert.present();
-  }
+  }*/
 
   showMsg()
   {

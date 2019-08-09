@@ -6,11 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-      <ion-buttons left>
-          <button ion-button menuToggle>
-            <ion-icon name="menu" ></ion-icon>
-          </button>
-      </ion-buttons>
+      
   </ion-navbar>
 </ion-header>
 
@@ -28,7 +24,7 @@
               <p>Getting dirty while having fun is the name of the game. Your expert guides will lead you to prime locations to view Fortuna Valley and the tropical countryside, and are sure to help when you’re stuck in the mud. No blink of an eye, for there are some incredible views along the way as you travel up the foothills of Arenal Volcano and back down again.</p>
               
                   <div class="txt_cntr">
-                      <button ion-button small>CONTINUE</button>
+                      <button ion-button small (click)="checkoutPage()">CONTINUE</button>
                   </div>
             </div>
         </li>
@@ -40,7 +36,7 @@
               <h1 class="txt_cntr">ATV Adventure</h1>
               <p><img src="../../assets/products/arenal_one.jpg" /></p>
               <div class="txt_cntr">
-                  <button ion-button small>CONTINUE</button>
+                  <button ion-button small (click)="checkoutPage()">CONTINUE</button>
               </div>
           </div>
         </li>
@@ -51,7 +47,7 @@
           <div id="tab-content3" class="content">
               <h1 class="txt_cntr">ATV Adventure</h1>
               <div class="txt_cntr">
-                  <button ion-button small>CONTINUE</button>
+                  <button ion-button small (click)="checkoutPage()">CONTINUE</button>
               </div>
           </div>
         </li>
@@ -65,7 +61,7 @@
               <p>End&nbsp;&nbsp;&nbsp;<input type="date"></p>
               <p>Person Per(Tour)<input type="text" class="content_four_booknow" value="1"> x $99.00</p>
               <div class="txt_cntr">
-                  <button ion-button small>CONTINUE</button>
+                  <button ion-button small (click)="checkoutPage()">CONTINUE</button>
               </div>
           </div>
         </li>

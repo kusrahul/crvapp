@@ -77,7 +77,7 @@
     font-size: 16px;
     margin: 0px;
     width: 100%;
-    zborder: 2px solid #33ccff;
+    //zborder: 2px solid #33ccff;
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
 
@@ -111,6 +111,7 @@
             padding: 10px 15px;
             border-radius: 50px;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .btn-danger {
@@ -149,8 +150,30 @@
             margin: 0px auto;
             margin-bottom: 5px;
         }
-        
 
+        .login_txt_fb {
+            text-align: center;
+            background: #5bc0de;
+            border-radius: 25px;
+            padding: 10px;
+            cursor: pointer;
+        }
 
+        .login_txt_inst {
+            text-align: center;
+            background: #d9534f;
+            border-radius: 25px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .login_txt_fb a, .login_txt_inst a{
+            color: #fff;
+        }
+
+        .back-button-icon-ios {
+            font-size: 20px !important;
+        }
+
+     
 
         

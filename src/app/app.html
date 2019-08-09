@@ -18,24 +18,24 @@
               <p>Please login or create an account for free</p>
                 </button>
           </ion-list>-->
-          <ion-list>
-            <button menuClose ion-item (click)="Welcome(WelcomePage)"><ion-icon name="home"></ion-icon> Home
+          <ion-list class="nvbox">
+            <button menuClose ion-item (click)="Welcome(WelcomePage)"><ion-icon name="ios-home-outline"></ion-icon> Home
             
             </button>
             
-            <button menuClose ion-item (click)="Aboutus(AboutusPage)"><ion-icon name="information-circle"></ion-icon> About Us
+            <button menuClose ion-item (click)="Aboutus(AboutusPage)"><ion-icon name="ios-information-circle-outline"></ion-icon> About Us
               
             </button>
 
-            <button menuClose ion-item (click)="Tour(TourlistPage)"><ion-icon name="tourlist"></ion-icon> Tour List
+            <!--<button menuClose ion-item (click)="Tour(TourlistPage)"><ion-icon name="md-plane"></ion-icon> Tour List
             
             </button>
 
-            <button menuClose ion-item (click)="Check(CheckoutPage)"><ion-icon name="check"></ion-icon> Checkout
+            <button menuClose ion-item (click)="Check(CheckoutPage)"><ion-icon name="ios-cart-outline"></ion-icon> Checkout
             
-            </button>
+            </button>-->
 
-            <button menuClose ion-item (click)="Login(LoginPage)"><ion-icon name="login"></ion-icon> Login
+            <!--<button menuClose ion-item (click)="Login(LoginPage)"><ion-icon name="login"></ion-icon> Login
             
             </button>
 
@@ -43,11 +43,11 @@
             
             </button>
 
-            <button menuClose ion-item (click)="Book(BooknowPage)"><ion-icon name="book"></ion-icon> Booknow
+            <button menuClose ion-item (click)="Book(BooknowPage)"><ion-icon name="ios-bookmarks-outline"></ion-icon> Booknow
             
-            </button>
+            </button>-->
 
-            <button menuClose ion-item (click)="Location(LocationPage)"><ion-icon name="location"></ion-icon> Location
+            <button menuClose ion-item (click)="Location(LocationPage)"><ion-icon name="ios-locate-outline"></ion-icon> Location
             
             </button>
 
@@ -56,8 +56,12 @@
             </button>
 
             <button menuClose ion-item (click)="Contactus(ContactusPage)">
-              <ion-icon name="call"></ion-icon> Contact Us
+              <ion-icon name="ios-call-outline"></ion-icon> Contact Us
             </button>
+
+            <button menuClose ion-item (click)="Login(LoginPage)">
+                <ion-icon name="md-log-out"></ion-icon> Logout
+              </button>
              
           </ion-list>
         </ion-content>

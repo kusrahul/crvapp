@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CheckoutPage } from '../checkout/checkout';
 
 /**
  * Generated class for the BooknowPage page.
@@ -22,4 +23,8 @@ export class BooknowPage {
     console.log('ionViewDidLoad BooknowPage');
   }
 
+  checkoutPage()
+  {
+    this.navCtrl.push(CheckoutPage);
+  }
 }
