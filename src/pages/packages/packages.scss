@@ -1,3 +1,219 @@
 page-packages {
+    * {
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    h1, h3{
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+    
+    .tabs{
+        width: 100%;
+        display: block;
+        margin: 5px auto;
+        position: relative;
+    }
+    
+    .tabs .tab{
+        float: left;
+        display: block;
+    }
+    
+    .tabs .tab>input[type="radio"] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .tabs .tab>label {
+        display: block;
+        padding: 6px 13px;
+        font-size: 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        color: #FFF;
+        //background: #4A83FD;
+        background: #ff6600;
+    }
+    
+    .tabs .content {
+        z-index: 0;/* or display: none; */
+        overflow: hidden;
+        width: 100%;
+        padding: 10px;
+        position: absolute;
+        top: 27px;
+        left: 0;
+        background: #eee;
+        color: #000;
+        
+        opacity:0;
+        transition: opacity 400ms ease-out;
+    }
+    
+    .tabs>.tab>[id^="tab"]:checked + label {
+        top: 0;
+        /*background: #303030;*/
+        background: #808080;
+        color: #F5F5F5;
+    }
+    
+    .tabs>.tab>[id^="tab"]:checked ~ [id^="tab-content"] {
+        z-index: 1;/* or display: block; */
+       
+        opacity: 1;
+        transition: opacity 400ms ease-out;
+    }
+    .txt_cntr{
+        text-align: center;
+    }
+    p{
+        text-align: justify;
+        margin-top: 10px;
+    }
+    .booking_title{
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+    }
+    .content_four_booknow{
+        max-width: 26px;
+    }
+    .content_four>p{
+        text-align: center;
+    }
+    .button{
+        width: 40%;
+        height: 34px;
+        background: #ff6600;
+    }
+    ul {
+        width: 100%;
+    }
+    li {
+        width: 33.33%;
+    }
 
+
+    .img_50{
+        width: 50%;
+    }
+
+    .pkg_hdr{
+        border: 1px solid #ff6600; background:#ff6600; color:#fff;
+        padding-left: 3px;font-weight: 400;
+    }
+
+    .tg_line{
+        color: #488aff; margin-top:10px;margin-bottom: 5px;
+        font-weight: 400;
+    }
+    .itr_smr{
+        padding-left: 15px;
+
+    }
+
+    .itr_smr li{
+        width: 100%;
+        text-align: justify;
+        
+    }
+    .itinerary_day h6{
+        color:#fff;
+        font-weight: 300;
+        padding: 3px; 
+        background-image: linear-gradient(to right, #2170fb, #2975fc, #317afd, #387ffd, #3f84fe, #4789fe, #4f8dfe, #5792fe, #6198fd, #6b9ffb, #75a5fa, #7fabf8);
+    }
+    .itinerary_day span{
+        color: #fff;
+        font-weight: 400;
+    }
+    .itinerary_day h4{
+        color: #666; 
+        margin: 10px 0px;
+    }
+    .itinerary_day h3{
+        color: #333; 
+        margin-top: 15px;
+    }
+    .hotels_costa_verde{
+        background: #fff; 
+        padding: 10px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_one{
+        border: 1px solid red; 
+        background: #eeeeee; 
+        margin-bottom: 10px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_two{
+        padding: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_three{
+        padding: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_four{
+        padding: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_four h4{
+        margin-top: 15px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_five_one{
+        padding: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_five{
+        margin-top: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_five span{
+        color: #ff6600;
+    }
+    .hotels_costa_verde .hotels_costa_verde_six{
+        border: 1px solid red; 
+        background: #eeeeee; 
+        margin-bottom: 10px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_seven{
+        padding: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_eight{
+        padding: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_nine{
+        padding: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_nine h4{
+        margin-top: 15px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_ten{
+        padding-top: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_eleven{
+        margin-top: 0px;
+    }
+    .hotels_costa_verde .hotels_costa_verde_eleven span{
+        color: #ff6600;
+    }
+    .rpp_font h6{
+        background-image: linear-gradient(to right, #51b749, #57b74f, #5cb754, #61b75a, #66b75f, #6ab763, #6db768, #71b76c, #75b770, #79b675, #7db679, #81b57d);
+    }
+    .rpp_font span{
+        font-weight: bold;
+    }
+    .cont_txt .cont_txt_colone{
+        border: 1px solid red; 
+        background: #eeeeee; 
+        margin-bottom: 10px;
+    }
+    .cont_txt .cont_txt_coltwo{
+        padding: 0px;
+    }
+    .cont_txt .cont_txt_colthree{
+        padding: 0px;
+    }
+    .cont_txt .cont_txt_colfour{
+        padding-top: 0px;
+    }
 }

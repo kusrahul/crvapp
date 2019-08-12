@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 /*import { HomePage } from '../home/home';*/
 import { Storage } from '@ionic/storage';
 
@@ -80,7 +80,7 @@ export class LocationPage {
 }]
 }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public storage:Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public storage:Storage, public alertCtrl: AlertController) {
     this.appointment_types = Object.keys(this.x)
   }
 
@@ -91,11 +91,6 @@ export class LocationPage {
   /*openHomePage(){
     this.navCtrl.push(HomePage);
   }*/
-
-  TourlistPage(){
-    
-    this.navCtrl.push(TourlistPage);
-  }
 
   public optionsFn(): void { 
     let locationvalue = this.place;
@@ -158,5 +153,23 @@ export class LocationPage {
       this.storage.set('my-json', x[locationvalue]);
     
    }
+
+   TourlistPage(){
+    if (!this.place) {
+      this.showAlert();
+      //return;
+   }
+   else{
+    this.navCtrl.push(TourlistPage);
+   }
+  }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'Please choose one',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
 }
 

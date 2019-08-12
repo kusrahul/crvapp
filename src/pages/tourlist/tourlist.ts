@@ -24,27 +24,8 @@ export class TourlistPage {
   optionsFn:any;
   displayData: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController,public storage:Storage) {
-  
+   
   }
-
-  
-    persons = [
-    {
-      "name": "Mike",
-      "colors": [
-        {"name": "blue"},
-        {"name": "white"}
-      ]
-    },
-  
-    {
-      "name": "Phoebe",
-      "colors": [
-        {"name": "red"},
-        {"name": "yellow"}
-      ]
-    }
-    ];
 
   ionViewDidLoad() {
     
@@ -54,22 +35,12 @@ export class TourlistPage {
     console.log(val); 
     });
   }
-
-  /*showAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'Per Person Tour',
-      inputs: [{
-        type:"text",
-        name:"personText"
-      }],
-      buttons: ['OK'],
-    });
-    alert.present();
-  }*/
-
   showMsg()
   {
-    this.navCtrl.push(BooknowPage);
+    this.navCtrl.push(BooknowPage, {
+      title: "Emergency"
+      });
+    //this.navCtrl.push(BooknowPage);
   }
 
 }
