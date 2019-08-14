@@ -35,13 +35,11 @@ export class TourlistPage {
     console.log(val); 
     });
   }
-  showMsg(data:string)
+  showMsg(id:any)
   {
-    alert(data);
-    this.navCtrl.push(BooknowPage, {
-      title: data
-      });
-    //this.navCtrl.push(BooknowPage);
+    //console.log(id);
+    this.storage.set('myId', id);
+    this.navCtrl.push(BooknowPage);
   }
 
 }

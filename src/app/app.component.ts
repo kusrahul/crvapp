@@ -10,7 +10,7 @@ import {WelcomePage} from '../pages/welcome/welcome';
 import {LocationPage} from '../pages/location/location';
 import { TourlistPage } from '../pages/tourlist/tourlist';
 import { CheckoutPage } from '../pages/checkout/checkout';
-import { PackagesPage } from '../pages/packages/packages';
+//import { PackagesPage } from '../pages/packages/packages';
 import { RegisterPage } from '../pages/register/register';
 import { BooknowPage } from '../pages/booknow/booknow';
 
@@ -19,7 +19,7 @@ import { BooknowPage } from '../pages/booknow/booknow';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = PackagesPage;
+  rootPage:any = WelcomePage;
   @ViewChild(Nav) nav: Nav;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

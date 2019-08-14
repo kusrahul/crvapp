@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CheckoutPage } from '../checkout/checkout';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the BooknowPage page.
@@ -16,12 +17,17 @@ import { CheckoutPage } from '../checkout/checkout';
 })
 export class BooknowPage {
    title: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+   val:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage:Storage) {
     this.title = this.navParams.get("title");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BooknowPage');
+    this.storage.get('myId').then((valId)=>{
+      this.val = valId;
+      console.log(this.val); 
+      });
   }
 
   checkoutPage()

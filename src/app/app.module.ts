@@ -21,8 +21,6 @@ import { CheckoutPage } from '../pages/checkout/checkout';
 import { PackagesPage } from '../pages/packages/packages';
 import { RegisterPage } from '../pages/register/register';
 import { Facebook } from '@ionic-native/facebook/ngx';
-//import { HttpClientModule } from '@angular/common/http';
-//import { ApiProvider } from '../providers/api/api';
 @NgModule({
   declarations: [
     MyApp,
@@ -41,7 +39,6 @@ import { Facebook } from '@ionic-native/facebook/ngx';
   ],
   imports: [
     BrowserModule,
-    //HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
@@ -66,8 +63,7 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
-    Facebook,
-    //ApiProvider
+    Facebook
   ]
 })
 export class AppModule {}

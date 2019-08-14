@@ -4,9 +4,6 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { Storage } from '@ionic/storage';
 
 import { TourlistPage } from '../tourlist/tourlist';
-import { Observable } from 'rxjs/Observable';
-import { HttpClient } from '@angular/common/http';
-import { ApiProvider } from './../../providers/api/api';
  
 
 /**
@@ -24,146 +21,105 @@ import { ApiProvider } from './../../providers/api/api';
 export class LocationPage {
   place: any;
   type: any;
-  films: Observable<any>;
 
   i:any;
   appointment_types: any;
 
-  categories: Observable<any>;
-
   x = {
-  "Arenal": 
-  [{
-		"title": "ATV Adventure",
-    "image": "arenal_one.jpg"
-  },
+    "Arenal": 
+    [{
+      "id": "ar1",
+      "title": "ATV Adventure",
+      "image": "arenal_one.jpg",
+      "price": 99.00
+    },
+    {
+      "id": "ar2",
+      "title": "Arenal Volcano National Park Hike",
+      "image": "arenal_two.jpg",
+      "price": 55.00
+    },
+    {
+      "id": "ar3",
+      "title": "Arenal Volcano to MonteverdeTransfer Tour",
+      "image": "arenal_three.jpg",
+      "price": 70.00
+  }],
+    "Guanacaste": 
+    [{
+      "id": "gu1",
+      "title": "2 Tank Scuba Dives",
+      "image": "guan_one.jpg",
+      "price": 110.00
+    },
+    {
+      "id": "gu2",
+      "title": "ATV Tour Guanacaste",
+      "image": "guan_two.jpg",
+      "price": 75.00
+    },
   {
-    "title": "Arenal Volcano National Park Hike",
-    "image": "arenal_two.jpg"
-  },
-{
-  "title": "Arenal Volcano to MonteverdeTransfer Tour",
-  "image": "arenal_three.jpg"
-}],
-  "Guanacaste": 
-  [{
-    "title": "2 Tank Scuba Dives",
-    "image": "guan_one.jpg"
-  },
+    "id": "gu3",
+    "title": "ATV Tour Tamarindo",
+    "image": "guan_three.jpg",
+    "price": 85.00
+  }],
+    "Jaco": 
+    [{
+      "id": "ja1",
+      "title": "ATV Tour",
+      "image": "jaco_one.jpg",
+      "price": 80.00
+    },
+    {
+      "id": "ja2",
+      "title": "Buggy Jungle & River Combos",
+      "image": "jaco_two.jpg",
+      "price": 115.00
+    },
   {
-    "title": "ATV Tour Guanacaste",
-    "image": "guan_two.jpg"
-  },
-{
-  "title": "ATV Tour Tamarindo",
-  "image": "guan_three.jpg"
-}],
-  "Jaco": 
-  [{
-    "title": "ATV Tour",
-    "image": "jaco_one.jpg"
-  },
+    "id": "ja3",
+    "title": "Carara National Park",
+    "image": "jaco_three.jpg",
+    "price": 85.00
+  }],
+    "Manuel Antonio":
+    [{
+      "id": "ma1",
+      "title": "ATV Tour Manuel Antonio",
+      "image": "manuel_one.jpg",
+      "price": 99.00
+    },
+    {
+      "id": "ma2",
+      "title": "Canopy Safari Zipline Tour",
+      "image": "manuel_two.jpg",
+      "price": 115.00
+    },
   {
-    "title": "Buggy Jungle & River Combos",
-    "image": "jaco_two.jpg"
-  },
-{
-  "title": "Carara National Park",
-  "image": "jaco_three.jpg"
-}],
-  "Manuel Antonio":
-  [{
-    "title": "ATV Tour Manuel Antonio",
-    "image": "manuel_one.jpg"
-  },
-  {
-    "title": "Canopy Safari Zipline Tour",
-    "image": "manuel_two.jpg"
-  },
-{
-  "title": "Carara Biological Reserve",
-  "image": "manuel_three.jpg"
-}]
+    "id": "ma3",
+    "title": "Carara Biological Reserve",
+    "image": "manuel_three.jpg",
+    "price": 159.00
+  }]
 }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public storage:Storage, public alertCtrl: AlertController, public httpClient: HttpClient, public apiProvider: ApiProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public storage:Storage, public alertCtrl: AlertController) {
     this.appointment_types = Object.keys(this.x);
-    /*this.films = this.apiProvider.getCategories();
-    this.films
-    .subscribe(data => {
-      console.log('my data: ', data);
-    });*/
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LocationPage');
   }
 
-  /*openHomePage(){
-    this.navCtrl.push(HomePage);
-  }*/
-
   public optionsFn(): void { 
     let locationvalue = this.place;
     console.log(locationvalue);
-    let x = {
-      "Arenal": 
-      [{
-        "title": "ATV Adventure",
-        "image": "arenal_one.jpg"
-      },
-      {
-        "title": "Arenal Volcano National Park Hike",
-        "image": "arenal_two.jpg"
-      },
-      {
-      "title": "Arenal Volcano to MonteverdeTransfer Tour",
-      "image": "arenal_three.jpg"
-    }],
-      "Guanacaste": 
-      [{
-        "title": "2 Tank Scuba Dives",
-        "image": "guan_one.jpg"
-      },
-      {
-        "title": "ATV Tour Guanacaste",
-        "image": "guan_two.jpg"
-      },
-    {
-      "title": "ATV Tour Tamarindo",
-      "image": "guan_three.jpg"
-    }],
-      "Jaco": 
-      [{
-        "title": "ATV Tour",
-        "image": "jaco_one.jpg"
-      },
-      {
-        "title": "Buggy Jungle & River Combos",
-        "image": "jaco_two.jpg"
-      },
-    {
-      "title": "Carara National Park",
-      "image": "jaco_three.jpg"
-    }],
-      "Manuel Antonio":
-      [{
-        "title": "ATV Tour Manuel Antonio",
-        "image": "manuel_one.jpg"
-      },
-      {
-        "title": "Canopy Safari Zipline Tour",
-        "image": "manuel_two.jpg"
-      },
-    {
-      "title": "Carara Biological Reserve",
-      "image": "manuel_three.jpg"
-    }]
-    }
-
-      this.storage.set('my-json', x[locationvalue]);
+    let y = this.x;
+    this.storage.set('my-json', y[locationvalue]);
     
    }
+
 
    TourlistPage(){
     if (!this.place) {

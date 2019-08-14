@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the CheckoutPage page.
@@ -14,12 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'checkout.html',
 })
 export class CheckoutPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+val:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage:Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CheckoutPage');
+    this.storage.get('myId').then((valId)=>{
+      this.val = valId;
+      console.log(this.val); 
+      });
   }
 
 }
