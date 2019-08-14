@@ -11,7 +11,7 @@ import { ProductPage } from '../pages/product/product';
 import { AboutusPage } from '../pages/aboutus/aboutus';
 import { PrivacypolicyPage } from '../pages/privacypolicy/privacypolicy';
 import { ContactusPage } from '../pages/contactus/contactus';
-import { LoginPage } from '../pages/login/login';
+//import { LoginPage } from '../pages/login/login';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { BooknowPage } from '../pages/booknow/booknow';
 import { RestProvider } from '../providers/rest/rest';
@@ -21,6 +21,8 @@ import { CheckoutPage } from '../pages/checkout/checkout';
 import { PackagesPage } from '../pages/packages/packages';
 import { RegisterPage } from '../pages/register/register';
 import { Facebook } from '@ionic-native/facebook/ngx';
+//import { HttpClientModule } from '@angular/common/http';
+//import { ApiProvider } from '../providers/api/api';
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +32,6 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     PrivacypolicyPage,
     ContactusPage,
     BooknowPage,
-    LoginPage,
     WelcomePage,
     LocationPage,
     TourlistPage,
@@ -40,6 +41,7 @@ import { Facebook } from '@ionic-native/facebook/ngx';
   ],
   imports: [
     BrowserModule,
+    //HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
@@ -52,7 +54,6 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     PrivacypolicyPage,
     ContactusPage,
     BooknowPage,
-    LoginPage,
     WelcomePage,
     LocationPage,
     TourlistPage,
@@ -65,7 +66,8 @@ import { Facebook } from '@ionic-native/facebook/ngx';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
-    Facebook
+    Facebook,
+    //ApiProvider
   ]
 })
 export class AppModule {}

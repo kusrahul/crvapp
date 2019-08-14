@@ -153,17 +153,32 @@
 
         .login_txt_fb {
             text-align: center;
-            background: #5bc0de;
+            margin-bottom: 35px;
+            /*background: #5bc0de;
             border-radius: 25px;
             padding: 10px;
+            cursor: pointer;*/
+        }
+
+        .log_fb {
+            background: #5bc0de;
+            border-radius: 25px;
+            padding: 10px 78px;
             cursor: pointer;
         }
 
         .login_txt_inst {
             text-align: center;
-            background: #d9534f;
+            /*background: #d9534f;
             border-radius: 25px;
             padding: 10px;
+            cursor: pointer;*/
+        }
+
+        .log_insta {
+            background: #d9534f;
+            border-radius: 25px;
+            padding: 10px 78px;
             cursor: pointer;
         }
         .login_txt_fb a, .login_txt_inst a{

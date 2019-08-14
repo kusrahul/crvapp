@@ -15,8 +15,9 @@ import { CheckoutPage } from '../checkout/checkout';
   templateUrl: 'booknow.html',
 })
 export class BooknowPage {
-
+   title: string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.title = this.navParams.get("title");
   }
 
   ionViewDidLoad() {
