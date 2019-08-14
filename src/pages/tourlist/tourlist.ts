@@ -35,11 +35,20 @@ export class TourlistPage {
     console.log(val); 
     });
   }
+<<<<<<< HEAD
   showMsg(id:any)
   {
     //console.log(id);
     this.storage.set('myId', id);
     this.navCtrl.push(BooknowPage);
+=======
+  showMsg()
+  {
+    this.navCtrl.push(BooknowPage, {
+      title: "Emergency"
+      });
+    //this.navCtrl.push(BooknowPage);
+>>>>>>> 3898af06857e9d8b26cde1340e088138039e5b05
   }
 
 }
