@@ -105,24 +105,17 @@ export class LocationPage {
 }
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public storage:Storage, public alertCtrl: AlertController) {
-<<<<<<< HEAD
     this.appointment_types = Object.keys(this.x);
-=======
-    this.appointment_types = Object.keys(this.x)
->>>>>>> 3898af06857e9d8b26cde1340e088138039e5b05
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LocationPage');
   }
 
-<<<<<<< HEAD
-=======
   /*openHomePage(){
     this.navCtrl.push(HomePage);
   }*/
 
->>>>>>> 3898af06857e9d8b26cde1340e088138039e5b05
   public optionsFn(): void { 
     let locationvalue = this.place;
     console.log(locationvalue);
@@ -131,10 +124,6 @@ export class LocationPage {
     
    }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 3898af06857e9d8b26cde1340e088138039e5b05
    TourlistPage(){
     if (!this.place) {
       this.showAlert();

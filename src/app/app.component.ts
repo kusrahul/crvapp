@@ -6,11 +6,11 @@ import { AboutusPage } from '../pages/aboutus/aboutus';
 import { PrivacypolicyPage } from '../pages/privacypolicy/privacypolicy';
 import { ContactusPage } from '../pages/contactus/contactus';
 //import { LoginPage } from '../pages/login/login'; 
-import {WelcomePage} from '../pages/welcome/welcome';
-import {LocationPage} from '../pages/location/location';
+import { WelcomePage } from '../pages/welcome/welcome';
+import { LocationPage } from '../pages/location/location';
 import { TourlistPage } from '../pages/tourlist/tourlist';
 import { CheckoutPage } from '../pages/checkout/checkout';
-import { PackagesPage } from '../pages/packages/packages';
+//import { PackagesPage } from '../pages/packages/packages';
 import { RegisterPage } from '../pages/register/register';
 import { BooknowPage } from '../pages/booknow/booknow';
 
@@ -19,11 +19,7 @@ import { BooknowPage } from '../pages/booknow/booknow';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
   rootPage:any = WelcomePage;
-=======
-  rootPage:any = PackagesPage;
->>>>>>> 3898af06857e9d8b26cde1340e088138039e5b05
   @ViewChild(Nav) nav: Nav;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

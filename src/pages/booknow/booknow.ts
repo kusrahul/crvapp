@@ -17,12 +17,8 @@ import { Storage } from '@ionic/storage';
 })
 export class BooknowPage {
    title: string;
-<<<<<<< HEAD
    val:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage:Storage) {
-=======
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
->>>>>>> 3898af06857e9d8b26cde1340e088138039e5b05
     this.title = this.navParams.get("title");
   }
 
