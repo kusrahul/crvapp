@@ -22,16 +22,18 @@ export class BooknowPage {
    val:any;
    credentialsForm: FormGroup;
 
+   now = new Date();
+
    @ViewChild('personquant') personquant;
-   @ViewChild('startdate') startdate;
-   @ViewChild('enddate') enddate;
+   //@ViewChild('startdate') startdate;
+   //@ViewChild('enddate') enddate;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage:Storage, private formBuilder: FormBuilder) {
     this.title = this.navParams.get("title");
 
     this.credentialsForm = this.formBuilder.group({
-      text: ['', Validators.required],
-      date: ['', Validators.required]
+      text: ['', Validators.required]
+      //date: ['', Validators.required]
     });
   }
 
@@ -54,9 +56,16 @@ export class BooknowPage {
     let tax = (calc*5)/100;
     let day = this.personquant.value;
     let total = calc + tax;
-    console.log(this.startdate.value, this.startdate.value, this.personquant.value);
+    //console.log(this.startdate.value, this.startdate.value, this.personquant.value);
+    console.log(this.personquant.value);
     let checkVal = [{"myId": myId, "calPrice": calc, "day": day, "myPrice": myPrice, "tax": tax, "total": total}]
     this.storage.set('calAmount', checkVal);
     this.navCtrl.push(CheckoutPage);
+  }
+
+  onInputTime()
+  {
+    console.log(this.personquant.value);
+    let showvalchange = this.personquant.value;
   }
 }
