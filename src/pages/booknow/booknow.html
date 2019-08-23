@@ -53,14 +53,127 @@
         <li class="tab">
           <input type="radio" name="tabs" id="tab4" />
           <label for="tab4">Book Now</label>   
-          <div id="tab-content4" class="content content_four">
+          <div id="tab-content4" class="content content_four" *ngFor="let data of val">
               <h1 class="txt_cntr">ATV Adventure</h1>
-              <p>Start <input type="date"></p>
+              <!--<p>Start <input type="date"></p>
               <p>End&nbsp;&nbsp;&nbsp;<input type="date"></p>
               <p>Person Per(Tour)<input type="text" class="content_four_booknow" value="1"> x $99.00</p>
               <div class="txt_cntr">
-                  <button ion-button small (click)="checkoutPage()">CONTINUE</button>
+                  <button ion-button small (click)="zcheckoutPage()">CONTINUE</button>
               </div>
+                <ion-list class="date_txt_style">
+                  Start:
+                  <ion-item class="sdate_txt">
+                      <ion-input type='date' #startdate></ion-input>
+                  </ion-item>
+                  End:
+                  <ion-item class="edate_txt">
+                      <ion-input type='date' #enddate></ion-input>
+                  </ion-item>
+                  Person Per(Tour):
+                  <ion-item class="person_qty">
+                      <ion-input type='text' #personquant></ion-input>
+                  </ion-item>
+                  X 
+                  <span>${{data.myPrice}}</span>
+                </ion-list>
+                <div class="ztxt_cntr">
+                    <button ion-button small (click)="checkoutPage(data.myId, data.myPrice)">CONTINUE</button>
+                </div>-->
+
+
+
+
+
+
+                <form [formGroup]="credentialsForm">
+
+                    <!--<ion-item>
+                      <ion-label floating>Email</ion-label>
+                      <ion-input [formControl]="credentialsForm.controls['email']"
+                          type="email" #email></ion-input>
+                    </ion-item>
+                
+                    <div *ngIf="!credentialsForm.controls['email'].valid &&
+                    credentialsForm.controls['email'].dirty"
+                        class="validator-error">
+                      Please enter a valid email.
+                    </div>-->
+
+                    <!--<div *ngIf="credentialsForm.controls['email'].errors &&
+                    credentialsForm.controls['email'].dirty"
+                        class="validator-error">
+                      Please enter a valid email.
+                    </div>-->
+
+                    <ion-item>
+                        <ion-label stacked>Start Date</ion-label>
+                        <ion-input [formControl]="credentialsForm.controls['date']"
+                            type="date" #startdate></ion-input>
+                    </ion-item>
+                  
+                    <div *ngIf="!credentialsForm.controls['date'].valid &&
+                      credentialsForm.controls['date'].dirty"
+                          class="validator-error">
+                        Please enter start date.
+                    </div>
+
+                    <ion-item>
+                        <ion-label stacked>End Date</ion-label>
+                        <ion-input [formControl]="credentialsForm.controls['date']"
+                            type="date" #enddate></ion-input>
+                    </ion-item>
+                  
+                    <div *ngIf="!credentialsForm.controls['date'].valid &&
+                      credentialsForm.controls['date'].dirty"
+                          class="validator-error">
+                        Please enter end date.
+                    </div>
+
+                    <ion-item>
+                        <ion-label floating>Person Per(Tour)</ion-label>
+                        <ion-input [formControl]="credentialsForm.controls['text']"
+                            type="text" #personquant></ion-input>
+                      </ion-item>X 
+                      <span>${{data.myPrice}}</span>
+
+                    <div *ngIf="!credentialsForm.controls['text'].valid &&
+                    credentialsForm.controls['text'].dirty"
+                        class="validator-error">
+                      Please enter a valid number.
+                    </div>
+                
+                    <!--<ion-item>
+                      <ion-label floating>Password</ion-label>
+                      <ion-input [formControl]="credentialsForm.controls['password']"
+                          type="password"></ion-input>
+                    </ion-item>
+                
+                    <div *ngIf="!credentialsForm.controls['password'].valid &&
+                    credentialsForm.controls['password'].dirty"
+                        class="validator-error">
+                      Please enter a valid password.
+                    </div>-->
+                
+                    <ion-row class="sign-in-button-container">
+                      <ion-col text-center>
+                        <button ion-button block color="secondary"
+                            [disabled]="!credentialsForm.valid" (click)="checkoutPage(data.myId, data.myPrice)">
+                          CONTINUE
+                        </button>
+                      </ion-col>
+                    </ion-row>
+                
+                    <!--<ion-row>
+                      <ion-col text-center>
+                        <button ion-button clear color="light"
+                            (click)="onForgotPassword()">
+                          Forgot your password?
+                        </button>
+                      </ion-col>
+                    </ion-row>-->
+                
+                  </form>
           </div>
         </li>
       </ul>

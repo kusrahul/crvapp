@@ -26,11 +26,11 @@
       <h1>${{data.price}} <span>USD</span></h1>
       <ion-row>
         <ion-col col-6>
-          <button ion-button block color="secondary" class="buttons-ios-secondary btn_color" (click)="showMsg(data.id)">
+          <button ion-button block color="secondary" class="buttons-ios-secondary btn_color" (click)="showMsg(data.id,data.price)">
             Book Now</button>
         </ion-col>
         <ion-col col-6>
-          <button ion-button block color="secondary" class="buttons-ios-secondary btn_color" (click)="showMsg(data.id)">
+          <button ion-button block color="secondary" class="buttons-ios-secondary btn_color" (click)="showMsg(data.id,data.price)">
             Details</button>
         </ion-col>
       </ion-row>

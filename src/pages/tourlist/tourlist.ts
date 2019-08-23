@@ -36,10 +36,12 @@ export class TourlistPage {
     });
   }
 
-  showMsg(id:any)
+  showMsg(id:any, price:any)
   {
     //console.log(id);
-    this.storage.set('myId', id);
+   let tourdata = [{"myId": id, "myPrice": price}];
+
+    this.storage.set('myValue', tourdata);
     this.navCtrl.push(BooknowPage);
   }
 

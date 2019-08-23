@@ -96,4 +96,25 @@ page-booknow {
     li {
         width: 25%;
     }
+    .date_txt_style{
+        width: 72%;
+    }
+    .sdate_txt{
+        height: 30px;
+        min-height: 3.4rem;
+    }
+    .edate_txt{
+        height: 30px;
+        min-height: 3.4rem;
+    }
+    .text-input-ios{
+        margin: 0;
+    }
+    .person_qty{
+        /*width: 20%;
+        min-height: 3rem;*/
+        width: 35%;
+        min-height: 3.4rem;
+        padding: 0 0 0 5px;
+    }
 }

@@ -16,7 +16,7 @@
         <h5>When you are ready to proceed please
            <br/>fill out your details below to confirm<br/> your booking.</h5>
   </ion-item>
-  <ion-grid class="grid_border_check">
+  <ion-grid class="grid_border_check" *ngFor="let data of val">
     <ion-row class="bg_color_check">
 
         <ion-col col-5>
@@ -41,28 +41,28 @@
             </ion-col>
             <ion-col col-3>
                 <ion-row class="prod_check"> 
-                    <ion-col col-12>Per Person (Tour): 1 Day @ $80.00</ion-col>
+                    <ion-col col-12>Per Person (Tour): $<span>{{data.day}}</span> Day @ $<span>{{data.myPrice}}</span></ion-col>
                 </ion-row>  
             </ion-col>
 
               <ion-col col-4>
                   <ion-row class="prod_check"> 
-                    <ion-col col-12>$80.00</ion-col>
+                    <ion-col col-12><span>${{data.calPrice}}</span></ion-col>
                    </ion-row>  
               </ion-col>
-            </ion-row>
+    </ion-row>
 
     <ion-row>
         <ion-col col-8 class="bg_color_check"><h4>Subtotal</h4></ion-col>
-        <ion-col col-4>$80.00</ion-col>
+        <ion-col col-4>$<span>{{data.calPrice}}</span></ion-col>
       </ion-row>
       <ion-row>
           <ion-col col-8 class="bg_color_check"><h4>Tax</h4></ion-col>
-          <ion-col col-4>$4.00</ion-col>
+          <ion-col col-4>$<span>{{data.tax}}</span></ion-col>
         </ion-row>
       <ion-row class="bg_color_sky wh_tx">
           <ion-col col-8>TOTAL</ion-col>
-          <ion-col col-4>$84.00</ion-col>
+          <ion-col col-4>$<span>{{data.total}}</span></ion-col>
         </ion-row>
 
 
@@ -79,49 +79,49 @@
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>Name: </ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #name></ion-input>
           </ion-item>
       </ion-col>
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>Email: </ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #email></ion-input>
             </ion-item>
       </ion-col>
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>Phone: </ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #phone></ion-input>
             </ion-item>
       </ion-col>
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>Address: </ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #address></ion-input>
             </ion-item>
       </ion-col>
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>City:</ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #city></ion-input>
             </ion-item>
       </ion-col>
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>Country: </ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #country></ion-input>
             </ion-item>
       </ion-col>
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>Postal Code: </ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #postalcode></ion-input>
             </ion-item>
       </ion-col>
       <ion-col col-12>
           <ion-item>
               <ion-label stacked>Note: </ion-label>
-              <ion-input type='text'></ion-input>
+              <ion-input type='text' #note></ion-input>
             </ion-item>
       </ion-col>
       <ion-col col-12 class="liability_box">
@@ -131,7 +131,7 @@
           <p><ion-checkbox></ion-checkbox> I've read and agreed to the Terms of Service.</p>
       </ion-col>
       <ion-buttons>
-          <button ion-button>Continue</button>
+          <button ion-button (click)="paymentPage()">Continue</button>
       </ion-buttons>
     </ion-row>
   </ion-grid>
